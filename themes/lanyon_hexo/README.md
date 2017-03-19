@@ -9,14 +9,12 @@ modified version of Lanyon jeckyll theme for hexo.
 
 in `_config.yml`  add  to add these info to sidebar
 
-```
+```yml
 contact: 
-	- email: pietro.passarelli@gmail.com
-	- skype:  jasszz
-	# no @
-	- twitter: pietropassarell
-	- facebook: pietro.passarelli
-	- github: pietrop
+	- email: John.doe@email.com
+	# no @ for twitter profile
+	- twitter: johndoe_twitter
+	- github: johndoe_github
 ```
 
 ## Syntax hilight
