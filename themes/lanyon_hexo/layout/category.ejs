@@ -1,0 +1,25 @@
+
+<h1><%= _.capitalize(page.category) %></h1>
+
+<hr>
+<% site.posts.each(function(p){%>
+
+<% if (p.categories.data[0].name === page.category){ %>
+	<h2><%= p.title %></h2>
+	<!-- Optional imageif present -->
+	<% if (p.image){%>
+		<%- image_tag(p.image) %>
+	<% }%>
+	<small><%- time(p.date, 'MMMM Do YYYY') %></small> |
+
+	<small>Reading Time: <%- readingTime(page.content, 'Minutes', 40) %></small>
+	<br>
+
+	<%- p.excerpt %>
+
+	<a href="/<%= p.path %>">more »</a>
+	
+	<% }%> 	
+	<hr>	
+<%})%>
+

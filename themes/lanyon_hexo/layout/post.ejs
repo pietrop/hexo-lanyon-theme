@@ -1,0 +1,20 @@
+<!--  Post template 
+Post are in source/_post folder, and are markdown files
+see here for variable available in template
+https://hexo.io/docs/variables.html
+more on posts here 
+https://hexo.io/docs/writing.html
+-->
+
+<h1><%= _.capitalize(page.title) %> </h1>
+<!-- Date -->
+
+
+<!-- Description  -->
+<p><%= _.capitalize(page.descriptin) %></p> 
+
+<!-- TODO: add Reading time, helper function -->
+
+<hr>
+
+<%- page.content %>

@@ -1,0 +1,23 @@
+
+<h1>Tag: <%= _.capitalize(page.tag) %></h1>
+<% site.posts.each(function(p){%>
+<% p.tags.data.forEach(function(t){ %>
+		<% if (t.name == page.tag){%>
+			
+			<h2><%= p.title %></h2>
+			<!-- Optional imageif present -->
+		<!-- 	<% if (p.image){%>
+				<%- image_tag(p.image) %>
+			<% }%> -->
+			<small><%- time(p.date, 'MMMM Do YYYY') %></small> |
+
+			<small>Reading Time: <%- readingTime(page.content, 'Minutes', 40) %></small>
+			<br>
+
+			<%- p.excerpt %>
+
+			<a href="/<%= p.path %>">more »</a>
+
+		<% } %>
+	<%})%>
+<%})%>
